@@ -41,7 +41,7 @@ class DailyForecastTableViewCell: UITableViewCell {
     private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = true
-        imageView.image = UIImage(named: "cloudIcon")
+        imageView.image = UIImage(named: "CloudIcon")
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
