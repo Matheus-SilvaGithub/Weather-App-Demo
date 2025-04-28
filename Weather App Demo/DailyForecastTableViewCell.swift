@@ -40,8 +40,8 @@ class DailyForecastTableViewCell: UITableViewCell {
     
     private lazy var iconImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "sunIcon")
+        imageView.translatesAutoresizingMaskIntoConstraints = true
+        imageView.image = UIImage(named: "cloudIcon")
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -83,6 +83,12 @@ class DailyForecastTableViewCell: UITableViewCell {
     
     private func setConstraints() {
         stackView.setConstraints(contentView)
+        
+        NSLayoutConstraint.activate([
+            iconImageView.widthAnchor.constraint(equalToConstant: 40),
+            iconImageView.heightAnchor.constraint(equalToConstant: 40)
+        ])
+
     }
 }
 
