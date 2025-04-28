@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 60, weight: .bold)
-        label.text = "30˚C"
+        label.text = "30˚"
         label.textAlignment = .left
         label.textColor = UIColor(named: "SoftGray")
         return label
@@ -125,8 +125,8 @@ class ViewController: UIViewController {
     private lazy var hourlyCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 67, height: 84)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+        layout.itemSize = CGSize(width: 80, height: 100)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 22, bottom: 0, right: 111)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .clear
@@ -140,7 +140,7 @@ class ViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor.softGray
         label.text = "PROXIMOS DIAS"
-        label.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         label.textAlignment = .center
         return label
     }()
@@ -204,7 +204,7 @@ class ViewController: UIViewController {
             backgroundView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
         
         NSLayoutConstraint.activate([
-            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60),
+            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 11),
             headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
             headerView.trailingAnchor.constraint(equalTo:  view.trailingAnchor, constant: -35),
             headerView.heightAnchor.constraint(equalToConstant: 250),
@@ -217,16 +217,16 @@ class ViewController: UIViewController {
             cityLabel.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -15),
             cityLabel.heightAnchor.constraint(equalToConstant: 20),
             
-            temperatureLabel.topAnchor.constraint(equalTo: cityLabel.bottomAnchor,constant: 30),
-            temperatureLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 26),
+            temperatureLabel.topAnchor.constraint(equalTo: cityLabel.bottomAnchor,constant: 38),
+            temperatureLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 62),
             
             weatherIcon.heightAnchor.constraint(equalToConstant: 86),
             weatherIcon.widthAnchor.constraint(equalToConstant: 86),
-            weatherIcon.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -26),
+            weatherIcon.trailingAnchor.constraint(equalTo: headerView.trailingAnchor, constant: -44),
             weatherIcon.centerYAnchor.constraint(equalTo: temperatureLabel.centerYAnchor),
             weatherIcon.leadingAnchor.constraint(equalTo: temperatureLabel.trailingAnchor, constant: 15),
             
-            statusStackView.topAnchor.constraint(equalTo: weatherIcon.bottomAnchor, constant: 40),
+            statusStackView.topAnchor.constraint(equalTo: weatherIcon.bottomAnchor, constant: 30),
             statusStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
         ])
@@ -236,18 +236,18 @@ class ViewController: UIViewController {
             hourlyForecastLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
             hourlyForecastLabel.trailingAnchor.constraint(equalTo:  view.trailingAnchor, constant: -35),
             
-            hourlyCollectionView.topAnchor.constraint(equalTo: hourlyForecastLabel.bottomAnchor, constant: 22),
+            hourlyCollectionView.topAnchor.constraint(equalTo: hourlyForecastLabel.bottomAnchor, constant: 33),
             hourlyCollectionView.heightAnchor.constraint(equalToConstant: 84),
             hourlyCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             hourlyCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            dailyForecastLabel.topAnchor.constraint(equalTo: hourlyCollectionView.bottomAnchor, constant: 29),
+            dailyForecastLabel.topAnchor.constraint(equalTo: hourlyCollectionView.bottomAnchor, constant: 33),
             dailyForecastLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 35),
             dailyForecastLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -35),
             
-            dailyForecastTabelView.topAnchor.constraint(equalTo: dailyForecastLabel.bottomAnchor, constant: 30),
+            dailyForecastTabelView.topAnchor.constraint(equalTo: dailyForecastLabel.bottomAnchor, constant: 18),
             dailyForecastTabelView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             dailyForecastTabelView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             dailyForecastTabelView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)

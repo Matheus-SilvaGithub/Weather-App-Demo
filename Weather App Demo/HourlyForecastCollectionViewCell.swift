@@ -18,7 +18,7 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
         stackView.spacing = 4
         stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8)
         stackView.isLayoutMarginsRelativeArrangement = true
-        stackView.layer.cornerRadius = 20
+        stackView.layer.cornerRadius = 33
         stackView.layer.borderWidth = 1
         stackView.layer.borderColor = UIColor.contrastColor?.cgColor
         return stackView
@@ -29,7 +29,7 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "13:00"
         label.textColor = UIColor.softGray
-        label.font = UIFont.systemFont(ofSize: 10, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         label.textAlignment = .center
         return label
     }()
@@ -37,9 +37,9 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
     private lazy var temperatureLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "30˚C"
+        label.text = "30˚"
         label.textColor = UIColor.softGray
-        label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         label.textAlignment = .center
         return label
     }()
@@ -74,7 +74,7 @@ class HourlyForecastCollectionViewCell: UICollectionViewCell {
     private func setConstraints() {
         stackView.setConstraints(contentView)
         NSLayoutConstraint.activate([
-            iconImageView.heightAnchor.constraint(equalToConstant: 33)
+            iconImageView.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 }

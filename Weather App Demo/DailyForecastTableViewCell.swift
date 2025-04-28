@@ -23,7 +23,7 @@ class DailyForecastTableViewCell: UITableViewCell {
     private lazy var minTeperatureLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "min 25˚C"
+        label.text = "min 25˚"
         label.textColor = UIColor.softGray
         label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         return label
@@ -32,7 +32,7 @@ class DailyForecastTableViewCell: UITableViewCell {
     private lazy var maxTeperatureLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "max 32˚C"
+        label.text = "max 32˚"
         label.textColor = UIColor.softGray
         label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         return label
